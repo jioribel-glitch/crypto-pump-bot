@@ -1,6 +1,6 @@
 import requests
 import time
-import OS
+import os
 from datetime import datetime, timedelta
 
 # ================= CONFIGURACIÓN =================
@@ -86,4 +86,5 @@ while True:
         time.sleep(CHECK_INTERVAL)
     except Exception as e:
         send_telegram(f"⚠️ Error detectado:\n{e}")
+
         time.sleep(60)
