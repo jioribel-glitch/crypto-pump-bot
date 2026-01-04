@@ -4,8 +4,8 @@ import os
 from datetime import datetime, timedelta
 
 # ================= CONFIGURACIÓN =================
-TELEGRAM_TOKEN = "TELEGRAM_TOKEN"
-CHAT_ID = "CHAT_ID"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv( "CHAT_ID")
 
 ALERT_PERCENT = 50          # % de subida
 MIN_VOLUME = 1_000_000      # volumen mínimo en USD
@@ -88,3 +88,4 @@ while True:
         send_telegram(f"⚠️ Error detectado:\n{e}")
 
         time.sleep(60)
+
